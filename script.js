@@ -1,13 +1,13 @@
-function indexOfIgnoreCase(s1, s2) {
-  // write your code here
-	if(s1.slice(s2.indexOf[0])){
-		return s1[s2.indexOf[0]]
-	}else{
-		return -1;
-	}
+function indexOfIgnoreCase(str, subStr) {
+  // Convert both the main string and the substring to lowercase for case-insensitive comparison
+  const lowerStr = str.toLowerCase();
+  const lowerSubStr = subStr.toLowerCase();
+  
+  // Use the indexOf method to find the first occurrence of the substring
+  return lowerStr.indexOf(lowerSubStr);
 }
 
-// // Please do not change the code below
-// const s1 = prompt("Enter s1:");
-// const s2 = prompt("Enter s2:");
-// alert(indexOfIgnoreCase(s1, s2));
+// Test cases
+console.log(indexOfIgnoreCase("Hello World", "world"));  // Output: 6
+console.log(indexOfIgnoreCase("apple", "Ple"));          // Output: 2
+console.log(indexOfIgnoreCase("test", "aaa"));           // Output: -1
